@@ -34,7 +34,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
     List<SpaceObject> loadedObjects = [];
     for (var name in favoriteNames) {
       try {
-        // Используем поиск по имени, получаем первый результат
+       
         final list = await _apiService.searchObjects(name);
         if (list.isNotEmpty) {
           loadedObjects.add(list.first);
