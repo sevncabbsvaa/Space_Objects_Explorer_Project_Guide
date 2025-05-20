@@ -18,11 +18,11 @@ class _ObjectListPageState extends State<ObjectListPage> {
   final NasaApiService _apiService = NasaApiService();
   late Future<List<SpaceObject>> _objects;
 
-  // Hardcoded map of planets and their moons
+  
   final Map<String, List<String>> planetMoons = {
-    'Mercury': [], // Merkuriynin ayı yoxdur
-    'Venus': [], // Venusun ayı yoxdur
-    'Earth': ['Moon'], // Yerin ayı
+    'Mercury': [], 
+    'Venus': [],
+    'Earth': ['Moon'], 
     'Mars': ['Phobos', 'Deimos'],
     'Jupiter': ['Io', 'Europa', 'Ganymede', 'Callisto'],
     'Saturn': ['Titan', 'Enceladus', 'Rhea'],
@@ -30,7 +30,6 @@ class _ObjectListPageState extends State<ObjectListPage> {
     'Neptune': ['Triton', 'Nereid'],
   };
 
-  // Ay seçimi üçün state
   String? selectedMoon;
 
   @override
@@ -60,7 +59,6 @@ class _ObjectListPageState extends State<ObjectListPage> {
       body: Column(
         children: [
           if (isPlanetWithMoons)
-            // Moons dropdown
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: DropdownButton<String>(
