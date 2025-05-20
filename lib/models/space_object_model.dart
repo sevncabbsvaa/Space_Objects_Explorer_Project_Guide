@@ -1,3 +1,4 @@
+asiman
 class SpaceObject {
   final String name;
   String type;
@@ -15,3 +16,4 @@ class SpaceObject {
     this.isFavorite = false,
   });
 }
+
